@@ -1,12 +1,18 @@
 from flask import Flask, render_template
 application = Flask(__name__)
 
+
+
 @application.route("/")
+def mainhome():
+    return render_template("template.html")
+
+@application.route("/home")
 def home():
     return render_template("home.html")
 
 @application.route("/about")
-def home():
+def about():
     return render_template("about.html")
 
 @application.route("/world")
@@ -17,7 +23,5 @@ def hello():
 def test():
     return "This is a test"
 
-
-
 if __name__ == "__main__":
-    application.run()
+    application.run(debug=True)
