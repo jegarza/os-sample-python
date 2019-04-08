@@ -5,6 +5,8 @@
     <title>About Flask</title>
   </head>
   <body>
+    {% extends "template.html" %}
+    {% block content %}
     <h1> About Flask </h1>
     <p> Flask is a micro web framework written in Python.</p>
     <p> Applications that use the Flask framework include Pinterest,
@@ -12,6 +14,6 @@
     <h1> About OpenShift </h1>
     <p> OpenShift is a framework for application hosting. </p>
     <p> Develop build and scale on a public hosted cloud environment instantly. </p> 
-    
+    {% endblock %}
   </body>
 </html>
